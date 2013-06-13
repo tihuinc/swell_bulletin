@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613170200) do
+ActiveRecord::Schema.define(:version => 20130613171813) do
 
   create_table "surf_conditions", :force => true do |t|
     t.integer  "timestamp"
@@ -35,7 +35,10 @@ ActiveRecord::Schema.define(:version => 20130613170200) do
     t.string   "temperature_unit"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.integer  "surf_spot_id"
   end
+
+  add_index "surf_conditions", ["surf_spot_id"], :name => "index_surf_conditions_on_surf_spot_id"
 
   create_table "surf_spots", :force => true do |t|
     t.string   "name"
