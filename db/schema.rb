@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613153823) do
+ActiveRecord::Schema.define(:version => 20130613154348) do
 
   create_table "surf_spots", :force => true do |t|
     t.string   "name"
@@ -19,5 +19,7 @@ ActiveRecord::Schema.define(:version => 20130613153823) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "surf_spots", ["msw_id"], :name => "index_surf_spots_on_msw_id"
 
 end
