@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708234147) do
+ActiveRecord::Schema.define(:version => 20130708234602) do
 
   create_table "countries", :force => true do |t|
     t.string   "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130708234147) do
     t.integer  "global_region_id"
     t.integer  "division_id"
     t.integer  "county_id"
+    t.integer  "subdivision_id"
   end
 
   add_index "surf_spots", ["country_id"], :name => "index_surf_spots_on_country_id"
