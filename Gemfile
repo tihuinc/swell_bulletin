@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '4.0.1'
-gem 'postgres'
+gem 'pg'
 gem 'therubyracer'
 
 # Gems used only for assets and not required

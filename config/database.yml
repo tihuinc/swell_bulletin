@@ -1,8 +1,8 @@
 development:
   database: swell_development
-  adapter: mysql2
-  username: root
-  password: root
+  adapter: postgresql
+  username: swell
+  password: swell
   host: 127.0.0.1
   reconnect: true
   encoding: utf8
@@ -14,9 +14,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   database: swell_test
-  adapter: mysql2
-  username: root
-  password: root
+  adapter: postgresql
+  username: swell
+  password: swell
   host: 127.0.0.1
   reconnect: true
   pool: 5

@@ -9,35 +9,38 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708234825) do
+ActiveRecord::Schema.define(version: 20130708234825) do
 
-  create_table "countries", :force => true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "countries", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "divisions", :force => true do |t|
+  create_table "divisions", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "global_regions", :force => true do |t|
+  create_table "global_regions", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "subdivisions", :force => true do |t|
+  create_table "subdivisions", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "surf_conditions", :force => true do |t|
+  create_table "surf_conditions", force: true do |t|
     t.integer  "timestamp"
     t.integer  "local_timestamp"
     t.integer  "issue_timestamp"
@@ -57,18 +60,18 @@ ActiveRecord::Schema.define(:version => 20130708234825) do
     t.integer  "weather_id"
     t.string   "pressure_unit"
     t.string   "temperature_unit"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "surf_spot_id"
   end
 
-  add_index "surf_conditions", ["surf_spot_id"], :name => "index_surf_conditions_on_surf_spot_id"
+  add_index "surf_conditions", ["surf_spot_id"], name: "index_surf_conditions_on_surf_spot_id", using: :btree
 
-  create_table "surf_spots", :force => true do |t|
+  create_table "surf_spots", force: true do |t|
     t.string   "name"
     t.integer  "msw_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "country_id"
@@ -78,10 +81,10 @@ ActiveRecord::Schema.define(:version => 20130708234825) do
     t.integer  "subdivision_id"
   end
 
-  add_index "surf_spots", ["country_id"], :name => "index_surf_spots_on_country_id"
-  add_index "surf_spots", ["county_id"], :name => "index_surf_spots_on_county_id"
-  add_index "surf_spots", ["division_id"], :name => "index_surf_spots_on_division_id"
-  add_index "surf_spots", ["global_region_id"], :name => "index_surf_spots_on_global_region_id"
-  add_index "surf_spots", ["msw_id"], :name => "index_surf_spots_on_msw_id"
+  add_index "surf_spots", ["country_id"], name: "index_surf_spots_on_country_id", using: :btree
+  add_index "surf_spots", ["county_id"], name: "index_surf_spots_on_county_id", using: :btree
+  add_index "surf_spots", ["division_id"], name: "index_surf_spots_on_division_id", using: :btree
+  add_index "surf_spots", ["global_region_id"], name: "index_surf_spots_on_global_region_id", using: :btree
+  add_index "surf_spots", ["msw_id"], name: "index_surf_spots_on_msw_id", using: :btree
 
 end
