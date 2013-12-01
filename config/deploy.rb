@@ -1,3 +1,5 @@
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano'
 

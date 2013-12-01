@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.0.1'
+gem 'rails', '3.2.15'
 gem 'pg'
 gem 'therubyracer'
-gem 'capistrano'
-gem 'capistrano-ext'
+gem 'capistrano', '2.12.0'
+gem 'capistrano-ext', '1.2.1'
 gem "simple_form"
 gem 'bootstrap-generators', '~> 2.0'
 gem 'devise'
@@ -14,8 +14,8 @@ gem 'gon'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 4.0.1'
-  gem 'coffee-rails', '~> 4.0.1'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
