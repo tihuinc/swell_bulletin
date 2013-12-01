@@ -3,6 +3,13 @@ source 'http://rubygems.org'
 gem 'rails', '4.0.1'
 gem 'pg'
 gem 'therubyracer'
+gem 'capistrano', '2.12.0'
+gem 'capistrano-ext', '1.2.1'
+gem "simple_form"
+gem 'bootstrap-generators', '~> 2.0'
+gem 'devise'
+gem 'timecop'
+gem 'gon'
 
 # Gems used only for assets and not required
 # in production environments by default.

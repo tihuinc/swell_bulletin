@@ -8,6 +8,15 @@ development:
   encoding: utf8
   pool: 5
 
+stage:
+  database: swell_stage
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  host: 50.56.113.102
+  reconnect: true
+  encoding: utf8
+  pool: 5
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
