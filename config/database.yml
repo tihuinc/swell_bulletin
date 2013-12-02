@@ -8,7 +8,7 @@ development:
   encoding: utf8
   pool: 5
 
-stage:
+staging:
   database: swell_stage
   adapter: postgresql
   username: postgres

@@ -1,7 +1,7 @@
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano'
 
-set :stages, %w(stage)
+set :stages, %w(staging)
 
 set :application, "swell_bulletin"
 set :repository,  "git@github.com:tihuinc/swell_bulletin.git"
