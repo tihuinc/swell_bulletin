@@ -4,4 +4,4 @@ swell_bulletin
 swell report and notifications
 
 
-http://localhost:3000/negotiate
+[I'm an inline-style link](http://localhost:3000/negotiate) 
